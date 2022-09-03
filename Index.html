@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`</title>
+  </head>
+  <style type="text/css" media="all">
+    body{
+      background-image: ;
+    }
+  </style>
+  <body>
+    <h3>gerador de senha</h1>
+    <h5>btcéfoda</h5>
+    <p>quantidade de caracteres: <input type="number" name="" id="qu" value=8 /></p>
+    <button type="submit" onclick="gerat()">gera</button>
+    <button onclick="ativar()" id="bt">desativar símbolos</button>
+    <div id="res"></div>
+    <br>
+    <br>
+    <br>
+    <a href="baixa.html">baixa app</a>
+    <script>
+  var qu=9
+   var res=document.getElementById("res")
+   var n="0123456789"
+   var tmi="qwertyuiopasdfghjklzxcvbnm"
+   var tmm=tmi.toUpperCase()
+   var s="+×÷=@#$%&?ღ•⁂€™↑↓→⇝√∞◀░▲" 
+   var tudo=n+tmi+tmm+s
+   var cara=tudo.length-1
+   var as=0
+   var i
+   var end=""
+   function ativar(){
+     if(as==1){
+       as=0
+       document.getElementById("bt").innerHTML="desativar símbolos"
+       tudo=n+tmi+tmm+s
+       cara=tudo.length-1
+     }else if(as==0){
+       as=1
+       document.getElementById("bt").innerHTML ="ativar símbolos"
+      tudo=n+tmi+tmm
+      cara=tudo.length-1
+     }
+   }
+   function gerat(){
+     lip()
+     var valoe=document.getElementById("qu").value
+     var valo=Number(valoe)
+     if (valo!=0){
+       qu=valo+1
+     }
+   for (i=1;i<qu;i++){
+     end+=tudo[Math.round(Math.random()*cara)]
+   }
+   res.innerHTML=end
+   }
+   function lip(){
+      res=document.getElementById("res")
+      end=" "
+      res.innerHTML=" "
+   }
+    </script>
+  </body>
+</html>
